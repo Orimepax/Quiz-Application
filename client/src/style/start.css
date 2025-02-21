@@ -1,0 +1,34 @@
+.container ol li{
+    font-size: 1.4em;
+    color: #000000;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.start .btn{
+    padding: .2em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 2em;
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    background-color: hsl(263, 100%, 80%);
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+#form .userid{
+    padding: .7em 2em;
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+}
