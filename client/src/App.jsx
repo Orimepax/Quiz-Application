@@ -1,27 +1,33 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './style/App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './style/App.css';
 
-import  Start  from './components/Start'
-import  Quiz  from './components/Quiz'
-import  Result  from './components/Result'
-import { CheckUserExist } from './helper/helper'
+import { createBrowserRouter, RouterProvider  } from 'react-router-dom';
 
-CheckUserExist()
+import Start from './components/Start.jsx';
+import Quiz from './components/Quiz.jsx';
+import Result from './components/Result.jsx';
+//import  { CheckUserExist }  from './helper/helper.jsx';
+
+const router = createBrowserRouter([
+  {
+    path : '/',
+    element : <Start></Start>
+  },
+  {
+    path : '/quiz',
+    element : <Quiz />
+  },
+  {
+    path : '/result',
+    element : <Result />
+  },
+])
 
 function App() {
   return (
     <>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Start />} />
-        <Route path="/quiz" element={<CheckUserExist><Quiz /></CheckUserExist>} />
-        <Route path="/result" element={<CheckUserExist><Result /></CheckUserExist>} />
-      </Routes>
-    </Router>
-  </>
-)
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
-export default App
+export default App;

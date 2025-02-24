@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root{
-  --primary-color: rgb(136, 110, 255);
-  --dark-color:rgb(68, 68, 68);
-  --light-color: hsl(0, 0%, 89%);
+  --primary-color: #0DFF92;
+  --dark-color:#222222;
+  --light-color: #f0f0f0;
 }
 
 body, html{
@@ -25,10 +25,9 @@ body, html{
 }
 
 .container .title{
-    font-weight: 1000;
     font-size: 3em;
     text-align: center;
-    border: 8px solid var(--primary-color);
+    border: 5px solid var(--primary-color);
     padding: .3em .2em;
     border-radius: 4px;
 }
@@ -82,7 +81,7 @@ body, html{
 }
 
 .prev{
-    background-color: #ca9df7;
+    background-color: #faff5a;
     justify-self: flex-start;
 }
 
@@ -111,8 +110,8 @@ ul li label{
   height: 30px;
   z-index: 9;
   cursor: pointer;
-  -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
 }
 
 ul li:hover label{

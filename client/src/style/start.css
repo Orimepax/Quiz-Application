@@ -1,6 +1,6 @@
 .container ol li{
     font-size: 1.4em;
-    color: #000000;
+    color: #cecece;
 }
 
 .start{
@@ -13,10 +13,10 @@
     padding: .2em 1.7em;
     border: none;
     border-radius: .1em;
-    font-size: 2em;
-    color: hsl(0, 0%, 0%);
+    font-size: 1.2em;
+    color: #202020;
     text-decoration: none;
-    background-color: hsl(263, 100%, 80%);
+    background-color: #faff5a;
 }
 
 #form{

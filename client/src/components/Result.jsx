@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 import '../style/Result.css';
 import { Link } from 'react-router-dom';
 
-import {Table} from './Table';
+import  Table  from './Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { attempts_Number, earnPoints_Number, flagResult } from '../helper/helper';
 
-/** import actions  */
+/** import actions */
 import { resetAllAction } from '../Redux/question_reducer';
 import { resetResultAction } from '../Redux/result_reducer';
 import { usePublishResult } from '../Hooks/setResult';

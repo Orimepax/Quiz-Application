@@ -2,28 +2,30 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const resultReducer = createSlice({
     name: 'result',
-    initialState: {
-        userid: null,
-        result: [],
+    initialState : {
+        userId : null,
+        result : []
     },
-    reducers: {
-        setUserId: (state, action) => {
-            state.userid = action.payload;
+    reducers : {
+        setUserId : (state, action) => {
+            state.userId = action.payload
         },
-        pushResultAction: (state, action) => { 
-            state.result.push(action.payload);
+        pushResultAction : (state, action) => {
+            state.result.push(action.payload)
         },
-        updateResultAction: (state, action) => {
-            const { index, checked } = action.payload;  
-            state.result[index] = checked;  
+        updateResultAction : (state, action) => {
+            const { trace, checked } = action.payload;
+            state.result.fill(checked, trace, trace + 1)
         },
-        resetResultAction: () => ({
-            userid: null,
-            result: []
-        })
+        resetResultAction : () => {
+            return {
+                userId : null,
+                result : []
+            }
+        }
     }
-});
+})
 
-// ✅ Export actions properly
-export const { setUserId, pushResultAction, updateResultAction, resetResultAction } = resultReducer.actions;
+export const { setUserId, pushResultAction, resetResultAction, updateResultAction } = resultReducer.actions;
+
 export default resultReducer.reducer;

@@ -1,4 +1,4 @@
-[
+export default[
     {
         "id": 1,
         "question": "Which planet is closest to the Sun?",

@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-//import { getServerData } from "../helper/helper";
-
-import { answers } from "../database/data";
+import { getServerData } from "../helper/helper";
 
 /** redux actions */
-import * as Action from '../Redux/question_reducer'
+import * as Action from '../Redux/question_reducer';
 
 /** fetch question hook to fetch api data and set value to store */
-export const useFetchQuestion = () => {
+
+export const useFetchQestion = () => {
     const dispatch = useDispatch();   
     const [getData, setGetData] = useState({ isLoading : false, apiData : [], serverError: null});
 
